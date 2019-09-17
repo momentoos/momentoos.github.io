@@ -320,33 +320,34 @@ h1 {
 
 /* Breakpoint 510px */
 
-/*
-@media only screen and (max-width: 510px) {
-  
-  section {
-	width: 430px;
-	margin-top: 20px;
-}
 
+@media only screen and (max-width: 500px) {
+  
 header {
-	width: 430px;
+	margin-top: 30px;
+
 }
+  
 
 
 h1 {
-	font-size: 38px;
-	line-height: 50px; 
+	font-size: 42px;
+	line-height: 58px;
 }
 
+  section {
+	
+	margin-top: 20px;
 
+}
 
-.logo-contact {
-	width: 430px;
+a {
+	visibility: hidden;
 }
  
 
 
-}*/
+}
 
 
 
