@@ -51,7 +51,9 @@ table {
 
 /* All my code starts from here */
 
-
+html {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -59,7 +61,7 @@ body {
 }
 
 header {
-	width: 960px;
+	width: 75%;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 60px;
@@ -67,15 +69,15 @@ header {
 
 }
 
-footer {
-	width: 960px;
+/*footer {
+	width: 75%;
 	margin-right: auto;
 	margin-left: auto;
 
-}
+}*/
 
 section {
-	width: 960px;
+	width: 75%;
 	height: 550px;
 	margin-right: auto;
 	margin-left: auto;
@@ -87,7 +89,7 @@ section {
 
 
 .logo-contact {
-	width: 960px;
+
 	display: flex;
 	justify-content: space-between;
 }
@@ -144,6 +146,7 @@ footer p {
 	font-weight: 300;
 	color: #CCA902;
 	text-decoration: none;
+
 	
  }
 
@@ -244,11 +247,11 @@ html, body { height: 100%; }
 
 
 
-
+/*
 canvas {
   display: block;
   vertical-align: bottom;
-}
+}*/
 
 
 /* ---- particles.js container ---- */
@@ -265,7 +268,7 @@ canvas {
 
 /* Breakpoint 1024px */
 
-
+/*
 @media only screen and (max-width: 1024px) {
   
   section {
@@ -285,34 +288,30 @@ header {
 
 
 }
-
+*/
 
 
 
 /* Breakpoint 768px */
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   
   section {
-	width: 568px
+	width: 75%;
+	margin-top: 50px;
+
 }
 
 header {
-	width: 568px;
+	width: 75%;
+
 }
 
 
 h1 {
 	font-size: 46px;
-}
-
-
-
-.logo-contact {
-	width: 568px;
-}
- 
+} 
 
 
 }
@@ -321,7 +320,7 @@ h1 {
 
 /* Breakpoint 510px */
 
-
+/*
 @media only screen and (max-width: 510px) {
   
   section {
@@ -336,7 +335,7 @@ header {
 
 h1 {
 	font-size: 38px;
-	line-height: 57px; 
+	line-height: 50px; 
 }
 
 
@@ -347,7 +346,7 @@ h1 {
  
 
 
-}
+}*/
 
 
 
@@ -355,27 +354,38 @@ h1 {
 
 
 @media only screen and (max-width: 320px) {
-  
-  section {
-	width: 280px;
-	margin-top: 30px;
-}
 
 header {
-	width: 280px;
+	margin-top: 30px;
+
 }
+  
 
 
 h1 {
-	font-size: 36px;
+	font-size: 26px;
+	line-height: 40px;
 }
 
+  section {
+	
+	margin-top: 20px;
 
-
-.logo-contact {
-	width: 280px;
 }
- 
+
+a {
+	visibility: hidden;
+}
+
+.wave {
+  background: url(../images/wave-gradient-red.svg) repeat-x; 
+  position: absolute;
+  top: -30px;
+  width: 6400px;
+  height: 30px;
+  animation: wave 17s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
 
 
 }
