@@ -1,0 +1,432 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* All my code starts from here */
+
+
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+header {
+	width: 75%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+	z-index: 200;
+
+}
+
+/*footer {
+	width: 75%;
+	margin-right: auto;
+	margin-left: auto;
+
+}*/
+
+section {
+	width: 75%;
+	height: 550px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 160px; 
+/*	background-image: url("../images/monogram-background.png");*/
+	background-repeat: no-repeat;
+
+}
+
+
+.logo-contact {
+
+	display: flex;
+	justify-content: space-between;
+}
+
+
+hr {
+	border-color: #151515;	
+	border-width: 1px;
+	margin-top: 50px;
+}
+
+/* Typography */
+
+
+
+
+h1 {
+	font-size: 56px;
+	font-family: kepler-std, serif;
+	font-weight: 300;
+	font-style: normal;
+	color: white;
+	line-height: 73px;
+	padding-top: 40px;
+}
+
+h2 {
+	font-size: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #CCA902;
+	margin-top: 40px;
+}
+
+
+p {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #CCA902;
+}
+
+footer p { 
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #808080;
+	margin-top: 20px;
+ }
+
+ a {
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #CCA902;
+	text-decoration: none;
+
+	
+ }
+
+
+#particles-js  {
+
+/*	Background-color: black;*/
+	Background-size: cover;
+	Height: 680px;
+
+ }
+
+ canvas {
+ 	position: fixed;
+  	bottom: 0;
+  	right: 0;
+  	opacity: .6;
+  	z-index: -1;
+ }
+
+
+ #myVideo {
+  position: fixed;
+  opacity: .3;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/*HERE STARTS THE WAVE ANIMATION*/
+
+
+
+html, body { height: 100%; }
+/*body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  overflow: hidden;
+}*/
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position: fixed;
+  bottom:0;
+  left:0;
+  background: #ED2E23;
+  z-index: 1;
+}
+
+.wave {
+  background: url(../images/wave-gradient-red.svg) repeat-x; 
+  position: absolute;
+  top: -100px;
+  width: 6400px;
+  height: 100px;
+  animation: wave 17s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+/*
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); }
+
+*/
+
+
+
+/*
+canvas {
+  display: block;
+  vertical-align: bottom;
+}*/
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/*BREAK POINTS*/
+
+
+
+/* Breakpoint 1024px */
+
+/*
+@media only screen and (max-width: 1024px) {
+  
+  section {
+	width: 768px
+}
+
+header {
+	width: 768px;
+}
+
+
+
+.logo-contact {
+	width: 768px;
+}
+ 
+
+
+}
+*/
+
+
+
+/* Breakpoint 768px */
+
+
+@media only screen and (max-width: 900px) {
+  
+  section {
+	width: 75%;
+	margin-top: 50px;
+
+}
+
+header {
+	width: 75%;
+
+}
+
+
+h1 {
+	font-size: 46px;
+} 
+
+
+}
+
+
+
+/* Breakpoint 510px */
+
+/*
+@media only screen and (max-width: 510px) {
+  
+  section {
+	width: 430px;
+	margin-top: 20px;
+}
+
+header {
+	width: 430px;
+}
+
+
+h1 {
+	font-size: 38px;
+	line-height: 50px; 
+}
+
+
+
+.logo-contact {
+	width: 430px;
+}
+ 
+
+
+}*/
+
+
+
+/* Breakpoint 320 */
+
+
+@media only screen and (max-width: 320px) {
+
+header {
+	margin-top: 30px;
+
+}
+  
+
+
+h1 {
+	font-size: 26px;
+	line-height: 40px;
+}
+
+  section {
+	
+	margin-top: 20px;
+
+}
+
+a {
+	visibility: hidden;
+}
+
+.wave {
+  background: url(../images/wave-gradient-red.svg) repeat-x; 
+  position: absolute;
+  top: -30px;
+  width: 6400px;
+  height: 30px;
+  animation: wave 17s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+
+}
+
+
+/*PAGE FADE EFFECT*/
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: black;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+
+}
+
+
+@keyframes fade-out {
+    from { opacity: 1 }
+      to { opacity: 0 }
+}
+
+@keyframes fade-in {
+    from { opacity: 0 }
+      to { opacity: 1 }
+}
+
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
+
+html { visibility:hidden; }
+
+
