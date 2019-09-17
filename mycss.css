@@ -51,7 +51,7 @@ table {
 
 /* All my code starts from here */
 
-
+html, body {width: auto!important; overflow-x: hidden!important} 
 
 body {
   margin: 0;
